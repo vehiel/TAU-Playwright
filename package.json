@@ -12,8 +12,7 @@
     "test:e2e:non-smoke": "npx playwright test tests-examples/ --grep-invert @smoke --project=firefox",
     "test:visual:acme": "npx playwright test example-applitools.spec.ts --project=chromium",
     "test:visual:playwright": "npx playwright test example3.spec.ts --project=all-browsers-and-tests",
-
-     "test-ui": "npx playwright test tests/ui/",
+    "test-ui": "npx playwright test tests/ui/",
     "test-ui-c": "npx playwright test tests/ui/specs/ --project=chromium",
     "test-ui-h": "npx playwright test tests/ui/specs/ --headed",
     "test-ui-auth-admin": "npx playwright test profile-stored-auth-multi-role-admin.spec.ts --project=chromium-auth ",
@@ -27,6 +26,6 @@
   "devDependencies": {
     "@applitools/eyes-playwright": "^1.17.0",
     "@playwright/test": "^1.34.2",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.6.1"
   }
 }

@@ -6,11 +6,11 @@ import baseEnvUrl from './tests/utils/environmentBaseUrl';
  * https://github.com/motdotla/dotenv
  */
 
-// import dotenv from 'dotenv';
+import dotenv from 'dotenv';
 // import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
-//require('dotenv').config();
+require('dotenv').config();
 
 /**
  * See https://playwright.dev/docs/test-configuration.
