@@ -7,8 +7,8 @@ import baseEnvUrl from './tests/utils/environmentBaseUrl';
  */
 
 import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+import path from 'path';
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 require('dotenv').config();
 
@@ -71,7 +71,7 @@ use: {
       name: 'chromium-auth',
       use: { 
         ...devices['Desktop Chrome'] ,
-        headless: false, //linea agregada por vehiel
+        headless: true, //linea agregada por vehiel
         // storageState: '.auth/admin.json', //use this in case you have multiple projects one per user
       },
       dependencies: ['auth-setup'],

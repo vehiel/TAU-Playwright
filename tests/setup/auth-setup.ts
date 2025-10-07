@@ -5,8 +5,12 @@ import uiPages from '../utils/uiPages';
 const adminFile = '.auth/admin.json';
 
 setup('authenticate as admin', async ({ page }) => {
-  const user = process.env.USERNAME_ADMIN!;
-  const password = process.env.PASSWORD!;
+  /*const user = process.env.USERNAME_ADMIN!;
+  const password = process.env.PASSWORD!;*/
+  
+  const user = 'tau-admin';
+  const password = 'TestingWithR3n@t@';
+  console.log("This is the user "+user);
   await doLogin(page, user, password);
 
   await page.context().storageState({ path: adminFile });
@@ -15,8 +19,10 @@ setup('authenticate as admin', async ({ page }) => {
 const userFile = '.auth/user.json';
 
 setup('authenticate as user', async ({ page }) => {
-    const user = process.env.USERNAME_USER!;
-    const password = process.env.PASSWORD!;
+    /*const user = process.env.USERNAME_USER!;
+    const password = process.env.PASSWORD!;*/
+    const user = 'tau-user';
+  const password = 'TestingWithR3n@t@';
     await doLogin(page, user, password);
     await page.context().storageState({ path: userFile });
 });

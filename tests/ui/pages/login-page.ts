@@ -17,13 +17,13 @@ class LoginPage {
   }
 
   async fillEmail(email: string) {
-    await this.userName.fill("vehiel");
-    //await this.userName.fill(email);
+    //await this.userName.fill("vehiel");
+    await this.userName.fill(email);
   }
 
   async fillPassword(password: string) {
-    await this.password.fill("*Vehiel123.");
-    //await this.password.fill(password);
+    //await this.password.fill("*Vehiel123.");
+    await this.password.fill(password);
   }
 
   async doLogin(email: string, password: string) {
