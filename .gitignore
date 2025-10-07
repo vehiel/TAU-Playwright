@@ -6,9 +6,6 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-
 playwright/.auth
-
 playwright/vehiel.txt
-
 playwright/.env.example
