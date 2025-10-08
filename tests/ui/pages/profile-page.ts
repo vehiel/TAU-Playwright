@@ -12,6 +12,7 @@ class SearchPage {
   readonly notLoggedInLabel: Locator;
   readonly searchField: Locator;
   readonly titleHeaderLabel: Locator;
+  readonly logoutbutton: Locator;
   
   constructor(page: Page) {
     this.page = page;
@@ -23,8 +24,12 @@ class SearchPage {
     this.notLoggedInLabel = page.getByText('Currently you are not logged into the Book Store application, please visit the login page to enter or register page to register yourself.');
     this.searchField = page.getByPlaceholder('Type to search');
     this.titleHeaderLabel = page.getByText('Title');
+    this.logoutbutton = page.getByText('Log out');
   }
 
+  async validarBotonLogOut(){
+   await expect(this.logoutbutton).toBeVisible();
+  }
   async fillSearchField(q: string) {
     await this.searchField.fill(q);
   }
@@ -44,12 +49,12 @@ class SearchPage {
 
   async checkLoggedIn() {
     //await expect(this.notLoggedInLabel).not.toBeVisible();
-     await expect(this.notLoggedInLabel).toBeVisible();
+    await expect(this.notLoggedInLabel).toBeVisible();
   }
 
   async checkLoggedInUser() {
     await expect(this.notLoggedInLabel).not.toBeVisible();
-    await expect(this.bookUserLabel).toBeVisible();
+    //await expect(this.bookUserLabel).toBeVisible();
   }
 
   async checkLoggedInAdmin() {

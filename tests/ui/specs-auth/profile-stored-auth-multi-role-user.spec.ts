@@ -15,5 +15,6 @@ test.describe('Book Store Application - Profile', () => {
     test('Sort books - user', async ( { page } ) => { 
         profilePage = new ProfilePage(page);
         await profilePage.checkLoggedInUser();
+        await profilePage.validarBotonLogOut();
     });
 });
