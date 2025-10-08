@@ -1,10 +1,12 @@
-#Resumen
+# Resumen
 ## Lo que se busca en este proyecto es tener un acercamiento a lo que es playwright, para asi poder certificar los conocimientos adquiridos en proyecto.
 ## Además de obtener mejores técnicas para realizar los procesos.
-## Lo mejor de este proyecto es la conexión a la base de datos y el proceso de autenticación que playwright nos ofrece
+## Lo mejor de este proyecto es la conexión a la base de datos y el proceso de autenticación que playwright nos ofrece.
+## El proyecto de la parte advanced se tuvo que arreglar paso a paso por mi cuenta. Esto debido a dependencias y cosas que el instructor no indico. Por ejemplo las variables de ambiente no me funcionaron, en parte por este motivo meti los datos en una base de datos.
+## Archivos para revisar auth-setup.ts, todo lo que esta dentro de la carpeta test/data
 
 # Guía para correr el proyecto
->Primero se debe crear la Base de Datos use `CREATE TABLE login(  
+>Primero se debe crear la Base de Datos, query: `CREATE TABLE login(  
     id int NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
     create_time DATETIME COMMENT 'Create Time',
     usuario VARCHAR(100) COMMENT 'nombre de usuario',
